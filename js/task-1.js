@@ -9,9 +9,12 @@ const refs = {
   overlay: document.querySelector('.lightbox__overlay'),
 };
 
-function getGalleryMarkup(gallery) {
+function createGalleryMarkup(gallery) {
+  // TODO: Используем .map чтобы пройти по базе данных gallery и получить массив galleryMark всех параметров 'li' 'a' 'img'
   const galleryMark = gallery.map(image => {
+    // TODO: Создает HTML-элемент по указаному имени тега и возвращает ссылку на него как результат своего выполнения
     const itemGallery = document.createElement('li');
+    // TODO: добавляет клас до елементу
     itemGallery.classList.add('gallery__item');
 
     const linkGallery = document.createElement('a');
@@ -24,15 +27,24 @@ function getGalleryMarkup(gallery) {
     imagesGallery.dataset.source = image.original;
     imagesGallery.alt = image.description;
 
-    linkGallery.appendChild(imagesGallery);
+    // TODO: Добавляет linkGallery в конец дочерних элементов itemGallery
     itemGallery.appendChild(linkGallery);
+    // TODO: Добавляет imagesGallery в конец дочерних элементов linkGallery
+    linkGallery.appendChild(imagesGallery);
+    
 
     return itemGallery;
   });
 
+// TODO: append - Добавляет galleryMark в конец дочерних элементов gallery
+// ? ... spred  ?
   refs.gallery.append(...galleryMark);
 }
-getGalleryMarkup(gallery);
+
+createGalleryMarkup(gallery);
+
+
+
 
 refs.gallery.addEventListener('click', onGallaryClick);
 refs.btnCloseModal.addEventListener('click', onCloseModal);
