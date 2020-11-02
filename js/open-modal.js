@@ -10,6 +10,7 @@ import { onArrowsKeydown } from './arrows-keydown';
 export const modal = document.querySelector('div.js-lightbox')
 export const modalImg = document.querySelector('img.lightbox__image')
 
+
 export function openModal(evt) {
   evt.preventDefault()
   if (!evt.target.classList.contains('gallery__image')) {

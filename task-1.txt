@@ -1,5 +1,5 @@
 'use strict';
-import gallery from './gallery-items.js';
+import gallery from './js/data.js';
 
 const refs = {
   gallery: document.querySelector('.js-gallery'),
@@ -48,6 +48,7 @@ createGalleryMarkup(gallery);
 
 refs.gallery.addEventListener('click', onGallaryClick);
 refs.btnCloseModal.addEventListener('click', onCloseModal);
+
 
 function onGallaryClick(event) {
   event.preventDefault();
