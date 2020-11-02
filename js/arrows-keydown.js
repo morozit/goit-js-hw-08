@@ -1,4 +1,4 @@
-import data from './data';
+import data from './gallery-items';
 import { modalImg } from './open-modal';
 
 
