@@ -60,6 +60,7 @@ function closeModal(event) {
 
 function keyboardPres(event) {
   const UrlsArr = galleryItems.map((img) => img.original);
+
   if (event.code === "ArrowRight") {
     if (modalImg.src === UrlsArr[8]) {
       modalImg.src = UrlsArr[0];
@@ -68,6 +69,7 @@ function keyboardPres(event) {
     modalImg.src = UrlsArr[UrlsArr.indexOf(modalImg.src) + 1];
     return;
   }
+
   if (event.code === "ArrowLeft") {
     if (modalImg.src === UrlsArr[0]) {
       modalImg.src = UrlsArr[8];
@@ -76,7 +78,8 @@ function keyboardPres(event) {
     modalImg.src = UrlsArr[UrlsArr.indexOf(modalImg.src) - 1];
     return;
   }
-    if (event.code === "Escape") {
-      closeModal(event);
+
+  if (event.code === "Escape") {
+    closeModal(event);
   }
 }
