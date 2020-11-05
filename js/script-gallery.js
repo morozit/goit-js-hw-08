@@ -60,16 +60,8 @@ function closeModal(event) {
 
 function keyboardPres(event) {
   const UrlsArr = galleryItems.map((img) => img.original);
-
-  if (event.code === "ArrowRight") {
-    if (modalImg.src === UrlsArr[8]) {
-      modalImg.src = UrlsArr[0];
-      return;
-    }
-    modalImg.src = UrlsArr[UrlsArr.indexOf(modalImg.src) + 1];
-    return;
-  }
-
+  
+  // TODO: 
   if (event.code === "ArrowLeft") {
     if (modalImg.src === UrlsArr[0]) {
       modalImg.src = UrlsArr[8];
@@ -79,7 +71,32 @@ function keyboardPres(event) {
     return;
   }
 
+  if (event.code === "ArrowRight") {
+    if (modalImg.src === UrlsArr[8]) {
+      modalImg.src = UrlsArr[0];
+      return;
+    }
+    modalImg.src = UrlsArr[UrlsArr.indexOf(modalImg.src) + 1];
+    return;
+    
+  }
+
+  // TODO: ESC
   if (event.code === "Escape") {
     closeModal(event);
   }
+  
+
+
 }
+
+
+  function findIn (event) {
+
+    let index = pictures.findIndex((el) => {
+      return el.original === modalImg.getAttribute("src");
+    });
+
+    
+  };
+
