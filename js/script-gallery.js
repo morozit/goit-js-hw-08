@@ -24,22 +24,22 @@ function createGalleryMarkup(img) {
                   />
                 </a>
               </li>`;
-  }).join("");
+    }).join("");
 }
 
 galleryRefsList.insertAdjacentHTML('beforeend', galleryMarkup);
 galleryRefsList.addEventListener('click', openModal);
 
-function openModal(event) { 
+function openModal(event) {
   event.preventDefault();
   if (event.target.nodeName !== 'IMG') {
     return;
   }
 
   changeModalImgAttributes(event);
-  modal.classList.add('is-open'); 
-  
-  window.addEventListener('keydown', keyboardPres);  
+  modal.classList.add('is-open');
+
+  window.addEventListener('keydown', keyboardPres);
   modal.addEventListener('click', closeModal);
 }
 
@@ -49,7 +49,7 @@ function changeModalImgAttributes(event) {
 }
 
 function closeModal(event) {
-  if(event.target.tagName === "IMG") {
+  if (event.target.tagName === "IMG") {
     return;
   }
   modal.classList.remove('is-open');
