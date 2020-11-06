@@ -18,7 +18,23 @@
     <div class="lightbox js-lightbox">
       <div class="lightbox__overlay">
         <div class="lightbox__content">
-          <img class="lightbox__image" src="" alt="" />
+          <div class="lightbox__container-img">
+            <div class="lightbox__container-img--btn">
+              <button
+                type="button"
+                class="lightbox__button--left"
+                data-action="close-lightbox"
+              ></button>
+            </div>
+            
+            <img class="lightbox__image" src="" alt="" />
+            <button
+              type="button"
+              class="lightbox__button--right"
+              data-action="close-lightbox"
+            ></button>
+          </div>
+          
         </div>
 
         <button
