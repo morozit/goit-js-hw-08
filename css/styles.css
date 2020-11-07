@@ -101,10 +101,28 @@ body {
 .lightbox__container-img {
   position: relative;
 }
-.lightbox__container-img--btn {
+.lightbox__container-img--btn-left {
   position: absolute;
   height: 100%;
-  /* width: 100vw; */
+  width: 10%;
+  left: 0%;
+  background-color: transparent;
+}
+
+.lightbox__container-img--btn-right {
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  right: 0%;
+  background-color: transparent;
+}
+
+.lightbox__container-img--btn-left:hover,
+.lightbox__container-img--btn-left:focus,
+.lightbox__container-img--btn-right:hover,
+.lightbox__container-img--btn-right:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* filter: blur(10px); */
 }
 
 .lightbox__image {
@@ -118,10 +136,10 @@ body {
   transform: scale(1);
 }
 
-.lightbox__button {
+.lightbox__button-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 10px;
+  right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,17 +160,18 @@ body {
   background-repeat: no-repeat;
 }
 
-.lightbox__button--left {
+.lightbox__button-left {
   position: absolute;
   top: 50%;
   left: 1%;
   transform: translateY(-50%);
-  /* 
-  display: flex;
+  /* transform: translateX(-25%); */
+
+  /* display: flex;
   align-items: center;
   justify-content: center; */
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   padding: 0;
   margin: 0;
   border: none;
@@ -165,11 +184,11 @@ body {
   outline: none;
   background-image: url("../images/angle-left-solid.svg");
   background-position: center;
-  background-size: 60%;
+  background-size: 50%;
   background-repeat: no-repeat;
 }
 
-.lightbox__button--right {
+.lightbox__button-right {
   position: absolute;
   top: 50%;
   right: 1%;
@@ -177,32 +196,35 @@ body {
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   padding: 0;
   margin: 0;
   border: none;
   border-radius: 50%;
   background-color: transparent;
   color: #fff;
+  fill: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
   outline: none;
   background-image: url("../images/angle-right-solid.svg");
   background-position: center;
-  background-size: 60%;
+  background-size: 50%;
   background-repeat: no-repeat;
 }
 
-.lightbox__button:hover,
-.lightbox__button:focus {
+.lightbox__button-close:hover,
+.lightbox__button-close:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.lightbox__button--right:hover,
-.lightbox__button--left:hover,
-.lightbox__button--right:focus,
-.lightbox__button--left:focus {
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  background-color: rgba(129, 129, 129, 0.5);
-}
+/* .lightbox__container-img--btn-left:hover .lightbox__button-left,
+.lightbox__container-img--btn-left:hover .lightbox__button-left {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: #fff;
+  fill: rgba(255, 255, 255, 0.9);
+} */
+
+/* .lightbox__container-img--btn-left:focus .lightbox__button-right,
+.lightbox__container-img--btn-left:focus .lightbox__button-right  */
