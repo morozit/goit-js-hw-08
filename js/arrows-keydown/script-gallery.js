@@ -33,6 +33,13 @@ function createGalleryMarkup(img) {
 galleryRefsList.insertAdjacentHTML('beforeend', galleryMarkup);
 galleryRefsList.addEventListener('click', openModal);
 
+// TODO: Додатква ф-еція для зміни шляху та "альт"
+function changeModalImgAttributes(event) {
+	modalImg.src = event.target.dataset.source;
+	modalImg.alt = event.target.alt;
+}
+
+// TODO: Відкриття модалки, , добавлення слухачів
 function openModal(event) {
 	event.preventDefault();
 	if (event.target.nodeName !== 'IMG') {
@@ -41,14 +48,10 @@ function openModal(event) {
 	changeModalImgAttributes(event);
 	modal.classList.add('is-open');
 	window.addEventListener('keydown', keyboardPress);
-  // modal.addEventListener('click', closeModal);
+  modal.addEventListener('click', closeModal);
   pressArrows.addEventListener('click', mousePress);
 }
 
-function changeModalImgAttributes(event) {
-	modalImg.src = event.target.dataset.source;
-	modalImg.alt = event.target.alt;
-}
 
 function closeModal(event) {
 	if (event.target.tagName === "IMG") return;
@@ -86,7 +89,7 @@ function toggleSlide(par1, par2) {
 	}
 }
 
-const pressArrows = document.querySelector('[data-action="close-lightbox"]');
+const pressArrows = document.querySelector('[data-action="lightbox-button-press"]');
 
 function mousePress(event) {
   if (event.code === "ArrowLeft") {

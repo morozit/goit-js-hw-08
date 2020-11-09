@@ -163,14 +163,14 @@ body {
 .lightbox__button-left {
   position: absolute;
   top: 50%;
-  left: 1%;
+  left: 50%;
   transform: translateY(-50%);
-  /* transform: translateX(-25%); */
+  transform: translateX(-50%);
 
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  width: 50px;
+  width: 35px;
   height: 50px;
   padding: 0;
   margin: 0;
@@ -184,19 +184,20 @@ body {
   outline: none;
   background-image: url("../images/angle-left-solid.svg");
   background-position: center;
-  background-size: 50%;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
 .lightbox__button-right {
   position: absolute;
   top: 50%;
-  right: 1%;
+  right: 50%;
   transform: translateY(-50%);
+  transform: translateX(50%);
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  width: 50px;
+  width: 35px;
   height: 50px;
   padding: 0;
   margin: 0;
@@ -210,7 +211,7 @@ body {
   outline: none;
   background-image: url("../images/angle-right-solid.svg");
   background-position: center;
-  background-size: 50%;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
