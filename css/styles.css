@@ -107,6 +107,9 @@ body {
   width: 10%;
   left: 0%;
   background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .lightbox__container-img--btn-right {
@@ -115,6 +118,9 @@ body {
   width: 10%;
   right: 0%;
   background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .lightbox__container-img--btn-left:hover,

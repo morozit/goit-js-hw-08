@@ -21,22 +21,43 @@
     <div class="lightbox__overlay">
       <div class="lightbox__content">
         <div class="lightbox__container-img">
+          <!-- TODO: Варіант без div -->
+          <button
+            class="lightbox__container-img--btn lightbox__container-img--btn-left">
+            <i 
+              type="button"
+              class="lightbox__button-left"
+              data-action="lightbox-button-press"
+            ></i>
+          </button>
+          <button
+            class="lightbox__container-img--btn lightbox__container-img--btn-right">
+            <i 
+              type="button"
+              class="lightbox__button-right"
+              data-action="lightbox-button-press"
+            ></i>
+          </button>
 
-          <div class="lightbox__container-img--btn-left">
+
+
+
+
+          <!-- <div class="lightbox__container-img--btn-left" id="lightbox__container-img--btn">
             <button
               type="button"
               class="lightbox__button-left"
               data-action="lightbox-button-press"
             ></button>
-          </div>
+          </div> -->
 
-          <div class="lightbox__container-img--btn-right">
+          <!-- <div class="lightbox__container-img--btn-right">
             <button 
               type="button" 
               class="lightbox__button-right" 
               data-action="lightbox-button-press"
             ></button>
-          </div>
+          </div> -->
 
           <img class="lightbox__image" src="" alt="" />
 
